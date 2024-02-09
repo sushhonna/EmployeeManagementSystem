@@ -1,0 +1,44 @@
+{
+  "company": [
+    {
+      "name": "Accenture",
+      "empcount": "55",
+      "revenue": "2500",
+      "address": "Mumbai",
+      "isactive": true,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Atos",
+      "empcount": "44",
+      "revenue": "1500",
+      "address": "Airoli",
+      "isactive": true
+    },
+    {
+      "id": 3,
+      "name": "CG",
+      "empcount": "65",
+      "revenue": "5000",
+      "address": "Pune",
+      "isactive": true
+    },
+    {
+      "name": "Accenture",
+      "empcount": "55",
+      "revenue": "2500",
+      "address": "Mumbai",
+      "isactive": true,
+      "id": 4
+    },
+    {
+      "name": "Atos",
+      "empcount": "44",
+      "revenue": "1500",
+      "address": "Airoli",
+      "isactive": true,
+      "id": 5
+    }
+  ]
+}

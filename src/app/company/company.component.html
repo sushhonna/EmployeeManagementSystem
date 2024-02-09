@@ -1,0 +1,58 @@
+<div class="mat-elevation-z8 mx-auto mt-5">
+    <nav class="navbar bg-dark">
+        <div class="navbar-brand mx-auto text-white">Employee Management System</div>
+    </nav>
+
+    <div>
+        <button mat-raised-button color="primary" class="m-3" (click)="openPopup('')">Create new</button>
+    </div>
+
+    <table mat-table matSort [dataSource]="companyDataWithPagination">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+            <td mat-cell *matCellDef="let element">{{element.id}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+            <td mat-cell *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="empcount">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Employee Count</th>
+            <td mat-cell *matCellDef="let element">{{element.empcount | number}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="revenue">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Revenue</th>
+            <td mat-cell *matCellDef="let element">{{element.revenue | currency:'INR'}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="address">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Address</th>
+            <td mat-cell *matCellDef="let element">{{element.address}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="isactive">
+            <th mat-header-cell *matHeaderCellDef>Is Active</th>
+            <td mat-cell *matCellDef="let element">{{element.isactive}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef>Action</th>
+            <td mat-cell *matCellDef="let element">
+                <div>
+                    <button mat-raised-button color="primary" (click)="editCompany(element.id)">Edit</button> |
+                    <button mat-raised-button color="accent" (click)="deleteCompany(element.id)">Delete</button>
+                </div>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns:displayColumns"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[2,5,10,20]" showFirstLastButtons>
+
+    </mat-paginator>
+
+</div>

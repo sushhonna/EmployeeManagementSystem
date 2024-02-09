@@ -1,0 +1,35 @@
+<form class="example-form" [formGroup]="companyForm" (ngSubmit)="saveCompany()">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>ID</mat-label>
+        <input matInput placeholder="Id" formControlName="id">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Employee count</mat-label>
+        <input matInput placeholder="Employee count" formControlName="empcount">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Revenue</mat-label>
+        <input matInput placeholder="Revenue" formControlName="revenue">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Address</mat-label>
+        <textarea matInput placeholder="Address" formControlName="address"></textarea>
+    </mat-form-field>
+
+    <!-- <section class="example-section"> -->
+        <mat-checkbox formControlName="isactive">
+            Is Active
+        </mat-checkbox>
+    <!-- </section> -->
+    <div class="example-button-row m-3">
+        <button mat-raised-button color="primary">Save</button> | <button mat-raised-button color="accent" (click)="closePopup()">Close</button>
+    </div>
+</form>
